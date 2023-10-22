@@ -38,7 +38,7 @@ const NavbarCom = () => {
                                 data-out="fadeOutUp"
                             >
                                 <li>
-                                    <a href="#">Bosh sahifa</a>
+                                    <a href="#">BOSH SAHIFA</a>
                                 </li>
                                 <li>
                                     <a href="#">OSAGO</a>

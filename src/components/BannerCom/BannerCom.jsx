@@ -1,5 +1,50 @@
+import "./Banner.css"
 
 const BannerCom = () => {
+
+    // Osago box function
+    function btnOsago() {
+        // Div block
+        document.getElementById('box-osago').style.display = 'flex';
+
+        // Div none
+        document.getElementById('box-kasko').style.display = 'none';
+        document.getElementById('box-travel').style.display = 'none';
+
+        // Toggle Class Btn
+        document.getElementById('btn-osago').classList.add('active-toggle--btn');
+        document.getElementById('btn-kasko').classList.remove('active-toggle--btn');
+        document.getElementById('btn-travel').classList.remove('active-toggle--btn');
+    }
+
+    // Kasko box function
+    function btnKasko() {
+        // Div block
+        document.getElementById('box-kasko').style.display = 'flex';
+        // Div none
+        document.getElementById('box-osago').style.display = 'none';
+        document.getElementById('box-travel').style.display = 'none';
+
+        // Toggle Class Btn
+        document.getElementById('btn-osago').classList.remove('active-toggle--btn');
+        document.getElementById('btn-kasko').classList.add('active-toggle--btn');
+        document.getElementById('btn-travel').classList.remove('active-toggle--btn');
+    }
+
+    // Travel box function
+    function btnTravel() {
+        // Div block
+        document.getElementById('box-travel').style.display = 'flex';
+        // Div none
+        document.getElementById('box-osago').style.display = 'none';
+        document.getElementById('box-kasko').style.display = 'none';
+
+        // Toggle Class Btn
+        document.getElementById('btn-osago').classList.remove('active-toggle--btn');
+        document.getElementById('btn-kasko').classList.remove('active-toggle--btn');
+        document.getElementById('btn-travel').classList.add('active-toggle--btn');
+    }
+
     return (
         <>
             {/* Start Banner Area ============================================= */}
@@ -29,20 +74,82 @@ const BannerCom = () => {
                                             Qog‘ozbozlik va bosh og‘riqsiz sug‘urta polislarini onlayn
                                             rasmiylashtiring
                                         </p>
-                                        <div
-                                            className="newsletter-form wow fadeInDown"
-                                            data-wow-delay="1200ms"
-                                            data-wow-duration="400ms"
-                                        >
-                                            <form action="#">
-                                                <input
-                                                    type="text"
-                                                    placeholder="Telefon raqamingiz"
-                                                    className="form-control"
-                                                    name="phone"
-                                                />
-                                                <button type="submit">Boshlash</button>
-                                            </form>
+                                        <div className="newsletter-form wow fadeInDown mt-4" data-wow-delay="1200ms" data-wow-duration="400ms">
+                                            <div className="d-flex gap-4">
+                                                <button id="btn-osago" className="small-btn active-toggle--btn" onClick={btnOsago}>OSAGO</button>
+                                                <button id="btn-kasko" className="small-btn" onClick={btnKasko}>KASKO</button>
+                                                <button id="btn-travel" className="small-btn" onClick={btnTravel}>TRAVEL</button>
+                                            </div>
+
+                                            {/* ====================== OSAGO Section ====================== */}
+                                            <div id="box-osago" className="mt-3 bg-white rounded p-3 row">
+                                                <div className="col-sm-12 col-lg-4">
+                                                    <input type="text" className="form-control" placeholder="01A111AB" />
+                                                </div>    
+                                                <div className="col-sm-12 col-lg-2">
+                                                    <input type="text" className="form-control" placeholder="AAF" />
+                                                </div>    
+                                                <div className="col-sm-12 col-lg-4">
+                                                    <input type="text" className="form-control" placeholder="1234567" />
+                                                </div>    
+                                                <div className="col-sm-12 col-lg-2">
+                                                    <button style={{padding: "11px 30px"}}><i className="fa-solid fa-right-long"></i></button>
+                                                </div>    
+                                            </div>
+                                            {/* ====================== / OSAGO Section ====================== */}
+                                            
+                                            {/* ====================== KASKO Section ====================== */} 
+                                            <div id="box-kasko" className="mt-3 bg-white rounded p-3 row position-relative overly-div" style={{display: "none"}}>
+                                                <span className="btn-warning comming-soon--span text-white rounded">Tez Kunda</span>
+                                                <div className="col-sm-12 col-lg-5">
+                                                    <select className="form-control" name="brand" id="">
+                                                        <option aria-checked>Marka, model va komple...</option>
+                                                        <option value="Chevrolet">Chevrolet</option>
+                                                        <option value="Tayota">Tayota</option>
+                                                        <option value="BYD">BYD</option>
+                                                    </select>
+                                                </div>    
+                                                <div className="col-sm-12 col-lg-5">
+                                                    <select className="form-control" name="year" id="">
+                                                        <option aria-checked>Yilni tanlang</option>
+                                                        <option value="2020">2020</option>
+                                                        <option value="2021">2021</option>
+                                                        <option value="2022">2022</option>
+                                                        <option value="2023">2023</option>
+                                                    </select>
+                                                </div>    
+                                                <div className="col-sm-12 col-lg-2">
+                                                    <button style={{padding: "11px 30px"}}><i className="fa-solid fa-right-long"></i></button>
+                                                </div>    
+                                            </div>
+                                            {/* ====================== / KASKO Section ====================== */}
+                                            
+                                            {/* ====================== TRAVEL Section ====================== */}
+                                            <div id="box-travel" className="mt-3 bg-white rounded p-3 row position-relative overly-div" style={{display: "none"}}>  
+                                                <span className="btn-warning comming-soon--span text-white rounded">Tez Kunda</span>
+                                                <div className="col-sm-12 col-lg-5">
+                                                    <select className="form-control" name="" id="">
+                                                        <option aria-checked>Davlatni tanlang</option>
+                                                        <option value="Amerika">Amerika</option>
+                                                        <option value="Dubay">Dubay</option>
+                                                        <option value="Turkiya">Turkiya</option>
+                                                    </select>
+                                                </div>    
+                                                <div className="col-sm-12 col-lg-5">
+                                                    <select className="form-control" name="" id="">
+                                                        <option aria-checked>Maqsad</option>
+                                                        <option value="Sayohat">Sayohat</option>
+                                                        <option value="Chet elda ta'lim">Chet elda ta'lim</option>
+                                                        <option value="Sport (aktiv dam olish)">Sport (aktiv dam olish)</option>
+                                                        <option value="Og'ir mehnat">Og'ir mehnat</option>
+                                                    </select>
+                                                </div>    
+                                                <div className="col-sm-12 col-lg-2">
+                                                    <button style={{padding: "11px 30px"}}><i className="fa-solid fa-right-long"></i></button>
+                                                </div>
+                                            </div>
+                                            {/* ====================== / TRAVEL Section ====================== */}
+
                                         </div>
                                     </div>
                                 </div>
