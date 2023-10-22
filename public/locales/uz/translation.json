@@ -1,0 +1,126 @@
+{
+  "nav": {
+    "logo": "ADS",
+    "about": "Biz haqimizda",
+    "news": "Yangiliklar",
+    "achievement": "Bizning yutug'imiz",
+    "contact": "Bog‘lanish"
+  },
+  "main-header": {
+    "red-text": "100% sifatli ta’lim",
+    "big-size-text": "Biz uchun Muhimi a’lo darajadagi",
+    "big-size-span": "ta’lim",
+    "big-size-remains": "olishingiz",
+    "header-text-info": "Bizda 1-11 sinfgacha o’quvchilar olinadi va ular mahsus yo‘nalishlar bo’yicha tayyorlanadi ya’ni o’zlari tanlagan universitetga tayyorlanadi",
+    "header-submit": "Kontakt",
+    "header-play-text": "Bizning maktabimiz haqida batafsil video lavhada ko‘ rishingiz mumkin",
+    "scroll-down": "Pastga aylantiring"
+  },
+  "some-info": {
+    "title": "Sifatli va kafolatlangan ta’lim",
+    "desc": "Farzandingiz uchun biz ta’lim beramiz",
+    "title2": "Nufuzli universitetga tayyorlaning",
+    "desc2": "Universitetga maktabdan tayyorlaymiz",
+    "title3": "Yuqori malakali ustozlar",
+    "desc3": "Bizda yuqori malakali ustozlar dars beradi"
+  },
+  "destinations": {
+    "our": "Bizning",
+    "destinations": "yo'nalishlar",
+    "card-title": "YAPON-POLSHA AXBOROT TEXNOLOGIYALARI AKADEMIYASI",
+    "card-text": "Polsha-Yaponiya Axborot Texnologiyalari Akademiyasi 1994 yilda Polsha va Yaponiya hukumatlari o'rtasida...",
+    "card-title2": "WROCLAW BIZNES UNIVERSITETI",
+    "card-text2": "Vroklav Biznes Universiteti biznesga yo'naltirilgan dasturga ega bo'lgan xususiy universitetdir.",
+    "card-title3": "Tor Vergata - Rim Universiteti",
+    "card-text3": "Universitet Polshadagi xususiy universitetlar orasida faxrli uchinchi o'rinni egallaydi. Taniqli o'qituvchilar tarkibi...",
+    "card-title4": "Rimdagi La Sapienza Universiteti",
+    "card-text4": "Universitet Polshadagi xususiy universitetlar orasida faxrli uchinchi o'rinni egallaydi. Taniqli o'qituvchilar tarkibi, samarali ...",
+    "card-title5": "LAZARSKIY Universiteti",
+    "card-text5": "Polsha-Yaponiya Axborot Texnologiyalari Akademiyasi 1994 yilda Polsha va Yaponiya hukumatlari o'rtasida ...",
+    "card-title6": "COLLEGIUM CIVITAS Universiteti",
+    "card-text6": "Universitet Polshadagi xususiy universitetlar orasida faxrli uchinchi o'rinni egallaydi. Taniqli o'qituvchilar tarkibi, samarali ..."
+  },
+  "learn-now": {
+    "start-now": "Hoziroq o'rganishni boshlang",
+    "application": "Ariza qoldiring",
+    "quality-education": "Farzandingiz uchun sifatli ta’lim taqdim eting!",
+    "description": "Biz bilan bog‘laning sizga qaysi yo‘nalishda ta’lim olishingiz boyicha konsultatsiya taqdim etamiz"
+  },
+  "our-team": {
+    "our": "Bizning",
+    "team": "jamoa",
+    "one": "Koyash R. K.",
+    "prf_one": "Biolog, Kimyogar",
+    "two": "Gorlova E. N.",
+    "prf_two": "Bosh. sinf o'qituvchisi",
+    "three": "Tursunov R. X.",
+    "prf_three": "Shaxmatchi",
+    "four": "Xashimova M. A.",
+    "prf_four": "Arab tili o'qituvchisi",
+    "five": "Rahmatullin D. R.",
+    "prf_five": "Rus tili o'qituvchisi",
+    "six": "To'ychiyev S. G.",
+    "prf_six": "Matematika o'qituvchisi",
+    "seven": "Akramov J. U.",
+    "prf_seven": "Ingliz tili o'qituvchisi."
+  },
+  "partners": {
+    "our": "Bizning",
+    "partners": "hamkorlar"
+  },
+  "students": {
+    "description": "ADS boshqa maktablardan “amaliyotdagi nazariya” metodologiyasi bilan ajralib turadi. Demak, barcha ma’ruza va seminarlar o‘z sohasi bo‘yicha katta amaliy tajribaga ega mutaxassislar tomonidan olib boriladi. Farzandlaringizga chet tillarini o‘rgatmoqchi bo‘lsangiz, ADS maktabi aynan siz uchun",
+    "contact": "Biz bilan bog’laning"
+  },
+  "pupils": {
+    "title": "Bizning eng yaxshi",
+    "span": "talabalarimiz",
+    "class": "sinf",
+    "one": "Obidxodayev Odilxodja",
+    "two": "O'runov Mo'min",
+    "three": "Abdullayeva Muslima",
+    "four": "Moxirjonova Dilsora",
+    "five": "Urunova Amina",
+    "six": "Xayrullaev Ibrogim",
+    "seven": "Erkinboeva Ezoza",
+    "eight": "Ravshanova Osiyo",
+    "nine": "Qahramonov Islom",
+    "ten": "Ravshanov Muhammadumar"
+  },
+  "news": "Yangiliklar",
+  "other-news": "Boshqa yangiliklar",
+  "more": "Batafsil",
+  "about-us": {
+    "title": "Biz haqimizda",
+    "text": "Maktab tarkibida Asian Development Kids (Smart Akademik) Nodavlat Maktabgacha Ta`lim Tashkiloti mavjud.  MTT 11.10.2022 yil o`z faoliyatini boshlagan. 2 yoshdan 5 yoshgacha bolalarni qabul qiladi.",
+    "why-we": "Nega aynan biz?",
+    "why": "Maktabimiz binosi 2 ta (yuqori sinflar va boshlang`ich)\nSport zal, (futbol) maydoni, kutubxona, faollar zali, yopiq basseyn mavjud.\n0 – 11 (Rus va o`zbek) sinflarga о`quvchilar qabul qilinadi.\n5 kunlik o`qish;\n4 mahal ovqat;\nHaftasiga 2 akademik soat suzish (basseyn);\nMatematika va ingliz tili chuqurlashtirilgan tarzda o’qitiladi;\nTil egalari bilan muntazam “Speaking club”;\nArab, xitoy va koreys tillari boshlang`ich sinflarda haftasiga 2 akademik soat yuqori sinflarda 3 akademik soat o`tiladi;\nRobotatexnika boshlang`ich sinflarda haftasiga 1 akademik soat, yuqori sinflarda 2 akademik soat;\nSport turlaridan “Penchak Silat”, Gimnastika, Shaxmat bor;\nChQBT fani 5 sinfdan boshlab o`tiladi. (Qizlar texnologiya fanini, o`g`il bolalar ChQBT fanini o`qishadi.)\nXoreografiya, musiqa, vokal, aktyorlik mahorati darslari haftada 1 akademik soat bo`ladi.\nPsixolog, Defektolog, Pediatr va hamshira hizmatlari mavjud.",
+    "about": "Asian Development School – “New brand of your future”\n05.09.2022 yilo`z faoliyatini boshlagan.\nMaktab tarkibida Asian Development Kids (Smart Akademik) Nodavlat Maktabgacha Ta`lim Tashkiloti mavjud.  MTT 11.10.2022 yil o`zfaoliyatini boshlagan. 2 yoshdan 5 yoshgacha bolalarni qabul qiladi.\nMaktabimiz binosi 2 ta (yuqori sinflar va boshlang`ich)\nSport zal, (futbol) maydoni, kutubxona, faollar zali, yopiq basseyn mavjud.\n0 – 11 (Rus va o`zbek) sinflarga о`quvchilar qabul qilinadi.",
+    "big-text": "Yaxshi o'qituvchi bo'lish uchun siz o'rgatgan narsangizni sevishingiz va o'rgatganlaringizni sevishingiz kerak."
+  },
+  "achievements": {
+    "text": "Maqsadimiz yosh avlodni iqtidorini yoshlikdanoq topib va usha sohani rivojlantirishda kumak berish va boshqa fanlarda ham sifatli talim bergan holda maktabimizdan yetuk insonlar chiqarish",
+    "header-title": "Biz uchun Muhimi a’lo darajadagi ta’lim olishingiz",
+    "header-text": "Bizda 1-11 sinfgacha o’quvchilar olinadi va ular mahsus yo‘nalishlar bo’yicha tayyorlanadi ya’ni o’zlari tanlagan universitetga tayyorlanadi",
+    "goal": "Maktabimizning maqsadi",
+    "achievement": "Yutuqlarimiz va erishgan natijalar"
+  },
+  "goals": {
+    "one": "ASIAN DEVELOPMENT SCHOOL 6-\"B\" sinf o'quvchisi URALOV SARDOR \"AXMEDOV TEAM\" ochiq chempionatida 1-chi o'rinni egalladi \uD83E\uDD47",
+    "two": "ADS SCHOOL OCHIQ CHEMPIONATI 2022"
+  },
+  "qualities": {
+    "one": "Sifatli ta’lim",
+    "two": "Yangi texnologiyalar",
+    "three": "Tajribali o‘qituvchilar",
+    "four": "Zamonaviy sharoitlarga ega bo‘lgan maktab",
+    "five": "Chuqurlashtirilgan fanlar",
+    "six": "Top universitetlarga kirish",
+    "seven": "Ahil jamoa"
+  },
+  "contact": {
+    "feedback": "qayta aloqa",
+    "contacts": "Kontaktlar",
+    "address": "Manzil"
+  }
+}

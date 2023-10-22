@@ -1,19 +1,30 @@
 import './App.css'
-import Footer from './components/Footer/Footer';
 import NavbarCom from "./components/NavbarCom/NavbarCom.jsx";
-import Partners from './components/Partners/Partners';
-import Services from './components/Services/Services';
+import {Route, Routes} from "react-router-dom";
+// import {useEffect} from "react";
 import Home from "./page/Home/Home.jsx";
+import Osago from "./page/Osago/Osago.jsx";
+import Footer from "./components/Footer/Footer.jsx";
+
 
 function App() {
+
+    // const currentPath = useLocation().pathname;
+    // useEffect(() => {
+    //     if (!localStorage.getItem("lang")) {
+    //         localStorage.setItem("lang", "uz");
+    //     }
+    // }, []);
 
   return (
     <>
         <NavbarCom/>
-        <Home/>
-        {/* <Partners /> */}
-        <Services />
-        <Footer />
+        <Routes>
+            <Route path="/" element={<Home/>} />
+            <Route path="/osago" element={<Osago/>}/>
+            {/*<Route path="/contact" element={<Contact/>}/>*/}
+        </Routes>
+        <Footer/>
     </>
   )
 }

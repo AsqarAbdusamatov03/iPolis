@@ -1,6 +1,13 @@
 import "./Banner.css"
+import {useState} from "react";
+import getCar from "../../context/getCar.js";
+import {useNavigate, } from "react-router-dom";
 
 const BannerCom = () => {
+
+    // const [button, setButton] = useState(true)
+
+    const navigate = useNavigate();
 
     // Osago box function
     function btnOsago() {
@@ -16,7 +23,6 @@ const BannerCom = () => {
         document.getElementById('btn-kasko').classList.remove('active-toggle--btn');
         document.getElementById('btn-travel').classList.remove('active-toggle--btn');
     }
-
     // Kasko box function
     function btnKasko() {
         // Div block
@@ -30,7 +36,6 @@ const BannerCom = () => {
         document.getElementById('btn-kasko').classList.add('active-toggle--btn');
         document.getElementById('btn-travel').classList.remove('active-toggle--btn');
     }
-
     // Travel box function
     function btnTravel() {
         // Div block
@@ -44,6 +49,72 @@ const BannerCom = () => {
         document.getElementById('btn-kasko').classList.remove('active-toggle--btn');
         document.getElementById('btn-travel').classList.add('active-toggle--btn');
     }
+
+    const regionsIDForEosgouz = {
+        "01": 10,
+        "10": 11,
+        "20": 12,
+        "25": 13,
+        "30": 14,
+        "40": 15,
+        "50": 16,
+        "60": 17,
+        "70": 18,
+        "75": 19,
+        "80": 20,
+        "85": 21,
+        "90": 22,
+        "95": 23,
+    };
+
+
+    const [vehicle, setVehicle] = useState()
+    const [car, setCar] = useState();
+    const [vehilePinfl, SetvehilePinfl] = useState();
+
+
+    const [govNumber, setGovNumber] = useState("01M717KA");  /// 01M717KA
+    const [techpassportseria, setSeria] = useState("AAF");  ///   AAF
+    const [techPassportNumber, setNumber] = useState("4250550"); /// 4250550
+
+
+    const getVehicle = async () => {
+        let req = await getCar(govNumber, techpassportseria, techPassportNumber);
+        if (await req.req) {
+            navigate("/osago")
+            SetvehilePinfl(req.pinfl);
+            setCar(await req);
+            localStorage.setItem("car", JSON.stringify({
+                ... req,
+                govNumber,
+                techpassportseria,
+                techPassportNumber
+            }));
+            setVehicle(  {
+                brand: req.modelName,
+                model: req.modelName,
+                engineNumber: req.engineNumber,
+                insurancePeriodIdForEosgoUz: 1,
+                typeIdForEosgoUz: req.vehicleTypeId,  // Bu avtomobil turi; shuni calculatorga olib o'tish kerak, car_type ga berib yuborish kerak, if ishlatib, 243 qatordagi if ni olib ishlaish kerak!
+                manufacturedYear: req.issueYear,
+                stateRegistrationNumber: req.govNumber,
+                bodyNumber: req.bodyNumber,
+                passportSeries: techpassportseria,
+                passportNumber: techPassportNumber,
+                passportIssueDate: req.techPassportIssueDate.slice(0, 10), // API dan kelgan malumotni chiqarish kerak20-11-2002
+                discountTypeIdForEosgoUz: "1",
+                registeredPlaceIdForEosgoUz: "1",
+                regionIdForEosgoUz: regionsIDForEosgouz[req.govNumber.substr(0,2)],  // Hato (To'g'ri qo'yish kerak)
+                pinfl : req.pinfl,
+                inn: req.inn
+            },)
+
+
+        } else {
+            alert("Ma'lumot topilmadi!");
+        }
+    };
+
 
     return (
         <>
@@ -84,19 +155,47 @@ const BannerCom = () => {
                                             {/* ====================== OSAGO Section ====================== */}
                                             <div id="box-osago" className="mt-3 bg-white rounded p-3 row">
                                                 <div className="col-sm-12 col-lg-4">
-                                                    <input type="text" className="form-control" placeholder="01A111AB" />
+                                                    <input
+                                                        type="text"
+                                                        className="form-control"
+                                                        placeholder="01A111AB"
+                                                        maxLength={8}
+                                                        onChange={
+                                                            (e) => setSeria(e.target.value)
+                                                        }
+                                                    />
                                                 </div>    
                                                 <div className="col-sm-12 col-lg-2">
-                                                    <input type="text" className="form-control" placeholder="AAF" />
+                                                    <input
+                                                        type="text"
+                                                        className="form-control"
+                                                        placeholder="AAF"
+                                                        id="vehilegobNumber"
+                                                        maxLength={8}
+                                                        onChange={
+                                                        (e) => setGovNumber(e.target.value)
+                                                    }
+                                                    />
                                                 </div>    
                                                 <div className="col-sm-12 col-lg-4">
-                                                    <input type="text" className="form-control" placeholder="1234567" />
+                                                    <input
+                                                        type="text"
+                                                        className="form-control"
+                                                        placeholder="1234567"
+                                                        maxLength={7}
+                                                        id="vehileNumber"
+                                                        pattern="[0-9]+"
+                                                        onInput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
+                                                        onChange={
+                                                            (e) => setNumber(e.target.value)
+                                                        }
+                                                    />
                                                 </div>    
                                                 <div className="col-sm-12 col-lg-2">
-                                                    <button style={{padding: "11px 30px"}}><i className="fa-solid fa-right-long"></i></button>
+                                                    <button onClick={getVehicle} style={{padding: "11px 30px"}}><i className="fa-solid fa-right-long"></i></button>
                                                 </div>    
                                             </div>
-                                            {/* ====================== / OSAGO Section ====================== */}
+                                            {/* ======================  OSAGO Section ====================== */}
                                             
                                             {/* ====================== KASKO Section ====================== */} 
                                             <div id="box-kasko" className="mt-3 bg-white rounded p-3 row position-relative overly-div" style={{display: "none"}}>
@@ -139,9 +238,9 @@ const BannerCom = () => {
                                                     <select className="form-control" name="" id="">
                                                         <option aria-checked>Maqsad</option>
                                                         <option value="Sayohat">Sayohat</option>
-                                                        <option value="Chet elda ta'lim">Chet elda ta'lim</option>
+                                                        <option value="Chet elda ta'lim">Chet elda tali</option>
                                                         <option value="Sport (aktiv dam olish)">Sport (aktiv dam olish)</option>
-                                                        <option value="Og'ir mehnat">Og'ir mehnat</option>
+                                                        <option value="Og'ir mehnat">gzip mehnat</option>
                                                     </select>
                                                 </div>    
                                                 <div className="col-sm-12 col-lg-2">

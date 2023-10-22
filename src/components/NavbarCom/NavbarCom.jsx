@@ -1,3 +1,4 @@
+import {Link} from "react-router-dom";
 
 const NavbarCom = () => {
     return (
@@ -38,16 +39,16 @@ const NavbarCom = () => {
                                 data-out="fadeOutUp"
                             >
                                 <li>
-                                    <a href="#">BOSH SAHIFA</a>
+                                    <Link to={"/"}>BOSH SAHIFA</Link>
                                 </li>
                                 <li>
-                                    <a href="#">OSAGO</a>
+                                    <Link to={"/osago"}>OSAGO</Link>
                                 </li>
                                 <li>
-                                    <a href="#">KASKO</a>
+                                    <Link to={"/"}>KASKO</Link>
                                 </li>
                                 <li>
-                                    <a href="#">ALOQA</a>
+                                    <Link to={"/"}>ALOQA</Link>
                                 </li>
                             </ul>
                         </div>
@@ -57,7 +58,7 @@ const NavbarCom = () => {
                             <div className="attr-nav">
                                 <ul>
                                     <li className="button">
-                                        <a href={+998935125324}>+998 (93) 512 53 24</a>
+                                        <a href="tel:+998 (93) 512 53 24">+998 (93) 512 53 24</a>
                                     </li>
                                 </ul>
                             </div>

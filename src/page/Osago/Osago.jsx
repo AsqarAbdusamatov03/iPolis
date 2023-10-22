@@ -1,9 +1,21 @@
 import "./Osago.css"
+import {useEffect, useState} from "react";
 
 const Osago = () => {
+// const [dataCar, setDataCar] = useState()
+
+    //
+    // useEffect(() => {
+    //     const storedData = localStorage.getItem('car');
+    //     if (storedData) {
+    //         setDataCar(storedData);
+    //     }
+    // }, []);
+
+    console.log(dataCar)
+
     return (
         <>
-
             <div
                 className="breadcrumb-area bg-gray bg-cover"
                 style={{ backgroundImage: "url(assets/img/shape/banner-3.jpg)" }}
@@ -121,7 +133,7 @@ const Osago = () => {
                                     >
                                         <div className="content">
                                             <p>Mashina raqami:</p>
-                                            <h5 className="fw-bold step-title">01M717KA</h5>
+                                            <h5 className="fw-bold step-title">{dataCar.govNumber}</h5>
                                         </div>
                                     </li>
                                     <li
