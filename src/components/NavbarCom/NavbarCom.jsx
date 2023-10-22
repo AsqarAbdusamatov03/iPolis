@@ -49,6 +49,15 @@ const NavbarCom = () => {
                                 <li>
                                     <a href="#">ALOQA</a>
                                 </li>
+                                <li className="dropdown">
+                                    <a href="#" className="dropdown-toggle" data-toggle="dropdown">Language</a>
+                                    <ul className="dropdown-menu">
+                                        <li><a href="#">RU</a></li>
+                                        <li><a href="#">UZ</a></li>
+                                        <li><a href="#">EN</a></li>
+                                    </ul>
+                                </li>
+
                             </ul>
                         </div>
                         {/* /.navbar-collapse */}
