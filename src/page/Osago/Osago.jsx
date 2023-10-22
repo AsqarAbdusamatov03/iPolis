@@ -1,5 +1,5 @@
 import "./Osago.css"
-import {useEffect, useState} from "react";
+// import {useEffect, useState} from "react";
 
 const Osago = () => {
 // const [dataCar, setDataCar] = useState()
@@ -12,7 +12,7 @@ const Osago = () => {
     //     }
     // }, []);
 
-    console.log(dataCar)
+    // console.log(dataCar)
 
     return (
         <>
