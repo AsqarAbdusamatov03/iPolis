@@ -1,7 +1,7 @@
 import axios from "axios";
 
 
-const getCar = async (govNumber, techpassportseria, techPassportNumber) =>{
+const getVehile = async (govNumber, techpassportseria, techPassportNumber) =>{
 
     try {
         const response = await axios.get(`${import.meta.env.VITE_REACT_APP_IPOLIS_ENDPOINT}/eosgouz/provider/vehicle`, {
@@ -23,4 +23,4 @@ const getCar = async (govNumber, techpassportseria, techPassportNumber) =>{
 
 }
 
-export default getCar;
+export default getVehile;

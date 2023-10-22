@@ -1,6 +1,6 @@
 import "./Banner.css"
 import {useState} from "react";
-import getCar from "../../context/getCar.js";
+import getVehile from "../../context/getVehile.js";
 import {useNavigate, } from "react-router-dom";
 
 const BannerCom = () => {
@@ -79,7 +79,7 @@ const BannerCom = () => {
 
 
     const getVehicle = async () => {
-        let req = await getCar(govNumber, techpassportseria, techPassportNumber);
+        let req = await getVehile(govNumber, techpassportseria, techPassportNumber);
         if (await req.req) {
             navigate("/osago")
             SetvehilePinfl(req.pinfl);
@@ -164,7 +164,7 @@ const BannerCom = () => {
                                                             (e) => setSeria(e.target.value)
                                                         }
                                                     />
-                                                </div>    
+                                                </div>
                                                 <div className="col-sm-12 col-lg-2">
                                                     <input
                                                         type="text"
@@ -173,10 +173,10 @@ const BannerCom = () => {
                                                         id="vehilegobNumber"
                                                         maxLength={8}
                                                         onChange={
-                                                        (e) => setGovNumber(e.target.value)
-                                                    }
+                                                            (e) => setGovNumber(e.target.value)
+                                                        }
                                                     />
-                                                </div>    
+                                                </div>
                                                 <div className="col-sm-12 col-lg-4">
                                                     <input
                                                         type="text"
@@ -190,14 +190,14 @@ const BannerCom = () => {
                                                             (e) => setNumber(e.target.value)
                                                         }
                                                     />
-                                                </div>    
+                                                </div>
                                                 <div className="col-sm-12 col-lg-2">
                                                     <button onClick={getVehicle} style={{padding: "11px 30px"}}><i className="fa-solid fa-right-long"></i></button>
-                                                </div>    
+                                                </div>
                                             </div>
                                             {/* ======================  OSAGO Section ====================== */}
-                                            
-                                            {/* ====================== KASKO Section ====================== */} 
+
+                                            {/* ====================== KASKO Section ====================== */}
                                             <div id="box-kasko" className="mt-3 bg-white rounded p-3 row position-relative overly-div" style={{display: "none"}}>
                                                 <span className="btn-warning comming-soon--span text-white rounded">Tez Kunda</span>
                                                 <div className="col-sm-12 col-lg-5">
@@ -207,7 +207,7 @@ const BannerCom = () => {
                                                         <option value="Tayota">Tayota</option>
                                                         <option value="BYD">BYD</option>
                                                     </select>
-                                                </div>    
+                                                </div>
                                                 <div className="col-sm-12 col-lg-5">
                                                     <select className="form-control" name="year" id="">
                                                         <option aria-checked>Yilni tanlang</option>
@@ -216,15 +216,15 @@ const BannerCom = () => {
                                                         <option value="2022">2022</option>
                                                         <option value="2023">2023</option>
                                                     </select>
-                                                </div>    
+                                                </div>
                                                 <div className="col-sm-12 col-lg-2">
                                                     <button style={{padding: "11px 30px"}}><i className="fa-solid fa-right-long"></i></button>
-                                                </div>    
+                                                </div>
                                             </div>
                                             {/* ====================== / KASKO Section ====================== */}
-                                            
+
                                             {/* ====================== TRAVEL Section ====================== */}
-                                            <div id="box-travel" className="mt-3 bg-white rounded p-3 row position-relative overly-div" style={{display: "none"}}>  
+                                            <div id="box-travel" className="mt-3 bg-white rounded p-3 row position-relative overly-div" style={{display: "none"}}>
                                                 <span className="btn-warning comming-soon--span text-white rounded">Tez Kunda</span>
                                                 <div className="col-sm-12 col-lg-5">
                                                     <select className="form-control" name="" id="">
@@ -233,7 +233,7 @@ const BannerCom = () => {
                                                         <option value="Dubay">Dubay</option>
                                                         <option value="Turkiya">Turkiya</option>
                                                     </select>
-                                                </div>    
+                                                </div>
                                                 <div className="col-sm-12 col-lg-5">
                                                     <select className="form-control" name="" id="">
                                                         <option aria-checked>Maqsad</option>
@@ -242,7 +242,7 @@ const BannerCom = () => {
                                                         <option value="Sport (aktiv dam olish)">Sport (aktiv dam olish)</option>
                                                         <option value="Og'ir mehnat">gzip mehnat</option>
                                                     </select>
-                                                </div>    
+                                                </div>
                                                 <div className="col-sm-12 col-lg-2">
                                                     <button style={{padding: "11px 30px"}}><i className="fa-solid fa-right-long"></i></button>
                                                 </div>
