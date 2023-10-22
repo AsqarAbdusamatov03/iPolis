@@ -51,7 +51,7 @@ const NavbarCom = () => {
                                     <Link to={"/"}>ALOQA</Link>
                                 </li>
                                 <li className="dropdown">
-                                    <a href="#" className="dropdown-toggle" data-toggle="dropdown">Language</a>
+                                    <a href="#" className="dropdown-toggle" data-toggle="dropdown">LANGUAGE</a>
                                     <ul className="dropdown-menu">
                                         <li><a href="#">RU</a></li>
                                         <li><a href="#">UZ</a></li>
