@@ -48,7 +48,7 @@ const Osago = () => {
         document.getElementById('client').style.display = 'none';
     }
 
-
+    /// write code to validate the email address
 
 
     return (
