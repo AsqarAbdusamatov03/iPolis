@@ -1,8 +1,11 @@
 import getPersonData from "../../context/getPerson.js";
 import {useState} from "react";
 import toastify from "../../hooks/toastify.js";
+import { useNavigate } from "react-router-dom";
 
 const Client = ({setClient, ClientClose}) => {
+
+     const navigate = useNavigate();
 
     // get client
     const [seriaClient, setClinetSeria] = useState();
@@ -14,13 +17,19 @@ const Client = ({setClient, ClientClose}) => {
     const reqCleint = async () => {
         let req = await getPersonData(seriaClient, numberClient, birthdateCLient)
         if (await req.req) {
-
+            
             toastify({
-                text: "Siznig malumotlaringiz togri keldi",
+                text: "Siznig malumotlaringiz qabul qlindi",
                 status: true,
                 time: 3000,
             });
 
+            setTimeout(() => {
+                localStorage.clear();
+                navigate("/")
+              }, 3000);
+              
+        
             setClient({
                 firstName: req.firstNameLatin,
                 lastName: req.lastNameLatin,

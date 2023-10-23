@@ -2,6 +2,7 @@ import "./Banner.css"
 import {useState} from "react";
 import getVehile from "../../context/getVehile.js";
 import {useNavigate, } from "react-router-dom";
+import toastify from "../../hooks/toastify.js";
 
 const BannerCom = () => {
 
@@ -70,23 +71,34 @@ const BannerCom = () => {
 
     const [vehicle, setVehicle] = useState()
     const [car, setCar] = useState();
+
     const [vehilePinfl, SetvehilePinfl] = useState();
 
 
-    const [govNumber, setGovNumber] = useState("01M717KA");  /// 01M717KA
-    const [techpassportseria, setSeria] = useState("AAF");  ///   AAF
-    const [techPassportNumber, setNumber] = useState("4250550"); /// 4250550
+    // console.log(vehicle, car ,vehilePinfl)
+
+
+    const [govNumber, setGovNumber] = useState("");  /// 01M717KA
+    const [techpassportseria, setSeria] = useState("");  ///   AAF
+        const [techPassportNumber, setNumber] = useState(""); /// 4250550
+
 
 
     const getVehicle = async () => {
         let req = await getVehile(govNumber, techpassportseria, techPassportNumber);
         if (await req.req) {
             navigate("/osago")
+
+            toastify({
+                text: "Siznig malumotlaringiz togri keldi",
+                status: true,
+                time: 3000,
+            });
+
             SetvehilePinfl(req.pinfl);
             setCar(await req);
             localStorage.setItem("car", JSON.stringify({
                 ... req,
-                govNumber,
                 techpassportseria,
                 techPassportNumber
             }));
@@ -111,7 +123,11 @@ const BannerCom = () => {
 
 
         } else {
-            alert("Ma'lumot topilmadi!");
+            toastify({
+                text: "Malumotni qayta tekshrib ko'ring",
+                status: false,
+                time: 4000,
+            });
         }
     };
 
@@ -158,10 +174,11 @@ const BannerCom = () => {
                                                     <input
                                                         type="text"
                                                         className="form-control"
+                                                        value={govNumber}
                                                         placeholder="01A111AB"
                                                         maxLength={8}
                                                         onChange={
-                                                            (e) => setSeria(e.target.value)
+                                                            (e) => setGovNumber(e.target.value)
                                                         }
                                                     />
                                                 </div>
@@ -169,11 +186,12 @@ const BannerCom = () => {
                                                     <input
                                                         type="text"
                                                         className="form-control"
+                                                        value={techpassportseria}
                                                         placeholder="AAF"
                                                         id="vehilegobNumber"
                                                         maxLength={8}
                                                         onChange={
-                                                            (e) => setGovNumber(e.target.value)
+                                                            (e) => setSeria(e.target.value)
                                                         }
                                                     />
                                                 </div>
@@ -181,14 +199,15 @@ const BannerCom = () => {
                                                     <input
                                                         type="text"
                                                         className="form-control"
+                                                        value={techPassportNumber}
                                                         placeholder="1234567"
                                                         maxLength={7}
-                                                        id="vehileNumber"
+                                                        id="number"
                                                         pattern="[0-9]+"
                                                         onInput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
-                                                        onChange={
-                                                            (e) => setNumber(e.target.value)
-                                                        }
+                                                         onChange={
+                                                             (e) => setNumber(e.target.value)
+                                                         }
                                                     />
                                                 </div>
                                                 <div className="col-sm-12 col-lg-2">
