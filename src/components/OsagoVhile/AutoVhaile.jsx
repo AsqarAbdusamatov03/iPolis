@@ -96,10 +96,10 @@ const AutoVhaile = ({OvnerOpen, data, SetvehilePinfl, vehilePinfl}) => {
                             <div className="form-group">
                                 <input
                                     className="form-control"
-                                    value={govNumber || data.govNumber}
+                                    value={govNumber}
                                     id="name"
                                     name="name"
-                                    placeholder={govNumber ? '' : "01A111AB"}
+                                    placeholder="01A111AB"
                                     maxLength={8}
                                     onChange={
                                         (e) => setGovNumber(e.target.value)
@@ -114,11 +114,11 @@ const AutoVhaile = ({OvnerOpen, data, SetvehilePinfl, vehilePinfl}) => {
                         <div className="col-lg-6">
                             <div className="form-group">
                                 <input
-                                    value={techpassportseria || data.techpassportseria}
+                                    value={techpassportseria}
                                     className="form-control"
                                     name="text"
                                     placeholder="AAF"
-                                    id={techpassportseria ? '' : "vehilegobNumber"}
+                                    id="vehilegobNumber"
                                     maxLength={8}
                                     onChange={
                                         (e) => setSeria(e.target.value)
@@ -130,12 +130,12 @@ const AutoVhaile = ({OvnerOpen, data, SetvehilePinfl, vehilePinfl}) => {
                         <div className="col-lg-6">
                             <div className="form-group">
                                 <input
-                                    value={techPassportNumber || data.techPassportNumber}
+                                    value={techPassportNumber}
                                     type="text"
                                     className="form-control"
                                     placeholder="1234567"
                                     maxLength={7}
-                                    id={techPassportNumber ? '' : "vehileNumber"}
+                                   id="number"
                                     pattern="[0-9]+"
                                     onInput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
                                     onChange={

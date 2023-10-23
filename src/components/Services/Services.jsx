@@ -1,5 +1,6 @@
 import React from 'react'
 import "./Services.css";
+import {Link} from "react-router-dom";
 
 export default function Services() {
     return (
@@ -14,11 +15,11 @@ export default function Services() {
                             >
                                 <h5 className="sub-title">Xizmatlar</h5>
                                 <h2 className="title">Eng ko'p foydalanilgan xizmatlar</h2>
-                                {/* <div className="button-border-length mt-35">
-                                    <a href="services.html.htm" className="btn-arrow-length">
+                                <div className="button-border-length mt-35">
+                                    <Link to={"/insurance-companies"} className="btn-arrow-length">
                                         See All
-                                    </a>
-                                </div> */}
+                                    </Link>
+                                </div>
                             </div>
                         </div>
                         {/* Start Single Item */}
