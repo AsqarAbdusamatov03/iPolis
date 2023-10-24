@@ -1,3 +1,4 @@
+import React from "react";
 import './App.css'
 import NavbarCom from "./components/NavbarCom/NavbarCom.jsx";
 import {Route, Routes, useLocation} from "react-router-dom";
@@ -14,7 +15,7 @@ import {useEffect} from "react";
 
 
 function App() {
-
+    ///
     const currentPath = useLocation().pathname;
     useEffect(() => {
         if (!localStorage.getItem("lang")) {
